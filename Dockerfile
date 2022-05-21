@@ -2,4 +2,5 @@ FROM burnett0/alpine-php8-lumen
 
 COPY src/ /lumen/
 
-EXPOSE 8080
+#docker build -t dockerphp .
+#docker run -d dockerphp -p 80:80
