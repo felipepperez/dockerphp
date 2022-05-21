@@ -4,7 +4,7 @@ COPY src/ /lumen/
 
 WORKDIR /lumen/
 
-CMD bash -c "composer install"
+RUN composer install
 
 #docker build -t dockerphp .
-#docker run -d dockerphp -p 80:80
+#docker run  -p 80:80 -d dockerphp
