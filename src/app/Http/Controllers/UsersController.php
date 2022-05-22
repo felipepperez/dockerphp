@@ -77,6 +77,8 @@ class UsersController extends Controller
     {
         $fields = $request->all();
 
+        return json_encode($fields);
+
         $api_token = isset($fields['api_token']) ? $fields['api_token'] : "";
 
         if ($api_token != "") {
