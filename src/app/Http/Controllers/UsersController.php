@@ -12,14 +12,13 @@ class UsersController extends Controller
     private $projectId = 'fullstack-350901';
     private $datasetId = 'fullstack';
     private $tableId = 'users';
-    private $serviceAccountPath = '../resources/apiKey/fullstack-350901-8291b4602679.json';
     private $BigQuery;
     private $BigQueryTable;
 
     public function __construct()
     {
         $this->BigQuery = new BigQueryClient([
-            'projectId' => $this->projectId, 'keyFilePath' => $this->serviceAccountPath
+            'projectId' => $this->projectId
         ]);
         $dataset = $this->BigQuery->dataset($this->datasetId);
         $this->BigQueryTable = $dataset->table($this->tableId);
