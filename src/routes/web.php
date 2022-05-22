@@ -19,11 +19,9 @@ $router->get('/', function () use ($router) {
 
 $router->post('auth', 'UsersController@auth');
 
-$router->get('users', function () use ($router) {
-    return [];
-});
+$router->post('add', 'UsersController@add');
  
-$router->get('users/{id}', function ($id) use ($router) {
+/* $router->get('users/{id}', function ($id) use ($router) {
     return ["id"=>$id];
 });
 
@@ -38,4 +36,4 @@ $router->put('users/{id}', function ($id) use ($router) {
 $router->delete('users/{id}', function ($id) use ($router) {
     //return ["id"=>$id];
     return 204;
-});
+}); */
